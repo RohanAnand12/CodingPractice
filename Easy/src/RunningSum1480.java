@@ -29,4 +29,17 @@ Constraints:
 
 
 public class RunningSum1480 {
+    public int[] runningSum(int[] nums) {
+        int[] val = new int[nums.length];
+        val[0] = nums[0];
+        for(int i =1;i<nums.length;i++){
+            val[i]=nums[i]+val[i-1];
+        }
+        return val;
+    }
+    /*
+    For this solution
+    Time Complex - O(n)
+    Space Complex - O(n)
+     */
 }
